@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portfolio của Võ Chí Cường - Lập trình viên Web & Mobile, sinh viên năm 4 CNTT. Chuyên Flutter, Dart, Node.js và phát triển Wear OS." />
+    <meta name="keywords"
+        content="Võ Chí Cường, portfolio, lập trình viên, Flutter, Dart, web developer, mobile developer, Wear OS" />
+    <meta property="og:title" content="Võ Chí Cường | Portfolio" />
+    <meta property="og:description" content="Lập trình viên Web & Mobile - Flutter, Dart, Node.js" />
+    <title>Võ Chí Cường | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header id="header">
+        <nav class="container nav">
+            <!-- Logo -->
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Võ Chí Cường<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <!-- Desktop links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">Về tôi</a></li>
+                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li><a href="#projects" class="nav-link">Dự án</a></li>
+                <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Dark / Light toggle -->
+                <button id="themeToggle" class="theme-btn" aria-label="Chuyển đổi giao diện">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!-- Hamburger (mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile drawer -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#about" class="mobile-link">Về tôi</a></li>
+                <li><a href="#skills" class="mobile-link">Kỹ năng</a></li>
+                <li><a href="#projects" class="mobile-link">Dự án</a></li>
+                <li><a href="#contact" class="mobile-link">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section id="hero" class="hero">
+            <!-- Animated background particles -->
+            <div class="hero-bg">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <!-- Greeting badge -->
+                    <div class="hero-badge reveal">
+                        <span class="badge-dot"></span>
+                        Sẵn sàng nhận dự án mới
+                    </div>
+
+                    <h1 class="hero-title reveal">
+                        Xin chào, tôi là<br />
+                        <span class="gradient-text">Võ Chí Cường</span>
+                    </h1>
+
+                    <!-- Typing effect subtitle -->
+                    <p class="hero-subtitle reveal">
+                        <span class="static-text">Tôi là một </span>
+                        <span class="typing-wrapper">
+                            <span id="typingText" class="typing-text"></span>
+                            <span class="cursor">|</span>
+                        </span>
+                    </p>
+
+                    <p class="hero-desc reveal">
+                        Đam mê xây dựng các ứng dụng mang tính ứng dụng cao, từ nền tảng
+                        Web đến Mobile và Wear OS. Luôn hướng tới trải nghiệm người dùng
+                        mượt mà và hiệu suất tối ưu.
+                    </p>
+
+                    <!-- CTA buttons -->
+                    <div class="hero-cta reveal">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-rocket"></i>
+                            Xem dự án
+                        </a>
+                        <a href="cv.pdf" download class="btn btn-outline">
+                            <i class="fa-solid fa-download"></i>
+                            Tải CV
+                        </a>
+                    </div>
+
+                    <!-- Quick stats -->
+                    <div class="hero-stats reveal">
+                        <div class="stat-item">
+                            <span class="stat-num">4+</span>
+                            <span class="stat-label">Dự án nổi bật</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">2+</span>
+                            <span class="stat-label">Năm kinh nghiệm</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Công nghệ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero 3D card -->
+                <div class="hero-card reveal" id="heroCard">
+                    <div class="hero-card-inner">
+                        <div class="code-window">
+                            <div class="code-titlebar">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="code-filename">cuong.dart</span>
+                            </div>
+                            <div class="code-body">
+                                <pre><code><span class="c-keyword">class</span> <span class="c-class">Developer</span> {
+  <span class="c-keyword">final</span> <span class="c-type">String</span> name = <span class="c-string">'Võ Chí Cường'</span>;
+  <span class="c-keyword">final</span> <span class="c-type">String</span> role = <span class="c-string">'Web & Mobile Dev'</span>;
+
+  <span class="c-keyword">final</span> <span class="c-type">List</span>&lt;<span class="c-type">String</span>&gt; skills = [
+    <span class="c-string">'Flutter'</span>, <span class="c-string">'Dart'</span>,
+    <span class="c-string">'JavaScript'</span>, <span class="c-string">'Node.js'</span>,
+    <span class="c-string">'Docker'</span>, <span class="c-string">'pfSense'</span>,
+  ];
+
+  <span class="c-type">bool</span> get <span class="c-fn">isAvailable</span> =&gt; <span class="c-bool">true</span>;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Cuộn xuống</span>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">01. Giới thiệu</span>
+                    <h2 class="section-title">Về <span class="gradient-text">tôi</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Avatar card -->
+                    <div class="about-visual reveal">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-placeholder">
+                                <img src="/assets/images/avatar/avatar.webp" alt="">
+                            </div>
+                            <div class="avatar-badge-stack">
+                                <div class="av-badge flutter"><i class="fa-solid fa-mobile-screen-button"></i> Flutter
+                                </div>
+                                <div class="av-badge web"><i class="fa-solid fa-globe"></i> Web Dev</div>
+                                <div class="av-badge wear"><i class="fa-solid fa-clock"></i> Wear OS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text content -->
+                    <div class="about-text reveal">
+                        <h3 class="about-name">Võ Chí Cường</h3>
+                        <p class="about-role">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            Sinh viên năm 4 · Ngành CNTT · Lập trình viên Web & Mobile
+                        </p>
+                        <p class="about-bio">
+                            Tôi là sinh viên năm 4 chuyên ngành Công nghệ Thông tin, với niềm đam mê mãnh liệt vào việc
+                            phát triển các ứng dụng thực tế. Từ những trang web responsive đến ứng dụng Flutter chạy
+                            trên Android và Wear OS, tôi luôn tìm cách mang lại trải nghiệm tốt nhất.
+                        </p>
+                        <p class="about-bio">
+                            Ngoài lập trình, tôi còn quan tâm đến hạ tầng mạng và DevOps — từ cấu hình pfSense
+                            high-availability đến triển khai ứng dụng với Docker và Render.
+                        </p>
+
+                        <div class="about-info-grid">
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-location-dot"></i> Vị trí</span>
+                                <span class="info-val">Việt Nam</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-envelope"></i> Email</span>
+                                <span class="info-val">cuong.vochi0411@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-briefcase"></i> Trạng thái</span>
+                                <span class="info-val status-available">Sinh viên năm 04</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="fa-solid fa-language"></i> Ngôn ngữ</span>
+                                <span class="info-val">Tiếng Việt, Tiếng Anh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">02. Kỹ năng</span>
+                    <h2 class="section-title">Chuyên <span class="gradient-text">môn</span></h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <!-- Category: Web -->
+                    <div class="skill-category reveal">
+                        <div class="skill-cat-header">
+                            <div class="skill-cat-icon web-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3>Web Development</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-chip" data-level="90">
+                                <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" />
+                                <span>HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip" data-level="85">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3" />
+                                <span>CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip" data-level="80">
+                                <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" />
+                                <span>JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip" data-level="75">
+                                <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js" />
+                                <span>Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Mobile -->
+                    <div class="skill-category reveal">
+                        <div class="skill-cat-header">
+                            <div class="skill-cat-icon mobile-icon"><i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <h3>Mobile & Wearable</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/flutter/02569B" alt="Flutter" />
+                                <span>Flutter</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/dart/0175C2" alt="Dart" />
+                                <span>Dart</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/android/3DDC84" alt="Android" />
+                                <span>Android / Wear OS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:78%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: DevOps -->
+                    <div class="skill-category reveal">
+                        <div class="skill-cat-header">
+                            <div class="skill-cat-icon devops-icon"><i class="fa-solid fa-server"></i></div>
+                            <h3>Networking & DevOps</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/pfsense/212121" alt="pfSense" />
+                                <span>pfSense (HA Network)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" />
+                                <span>Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/render/46E3B7" alt="Render" />
+                                <span>Render</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:72%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-chip">
+                                <img src="https://cdn.simpleicons.org/cloudflare/F38020" alt="Cloudflare" />
+                                <span>Cloudflare Workers</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="--w:70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">03. Dự án</span>
+                    <h2 class="section-title">Dự án <span class="gradient-text">nổi bật</span></h2>
+                    <p class="section-sub">Một số dự án tôi đã xây dựng và đang phát triển</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1: VFinance -->
+                    <article class="project-card reveal featured">
+                        <div class="project-img">
+                            <div class="project-img-placeholder finance">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/vochicuongg/QuanLyChiTieu_WearOS" class="proj-link"
+                                        title="Source Code WearOS"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://github.com/vochicuongg/QuanLyChiTieu_Android" class="proj-link"
+                                        title="Source Code Android"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">VFinance</h3>
+                            <p class="project-desc">
+                                Ứng dụng quản lý tài chính cá nhân đồng bộ trên Android & Wear OS (Galaxy Watch).
+                                Giao diện trực quan, đồng bộ dữ liệu thời gian thực, Widget & Complication/Tile cho Wear
+                                OS.
+                            </p>
+                            <div class="tech-badges">
+                                <span class="badge flutter">Flutter</span>
+                                <span class="badge dart">Dart</span>
+                                <span class="badge android">Wear OS</span>
+                                <span class="badge firebase">Firebase</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/vochicuongg/QuanLyChiTieu_WearOS" target="_blank"
+                                    class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i>
+                                    Source WearOS</a>
+                                <a href="https://github.com/vochicuongg/QuanLyChiTieu_Android" target="_blank"
+                                    class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i>
+                                    Source Android</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Xe Máy Ngọc Mười -->
+                    <article class="project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder bike">
+                                <i class="fa-solid fa-motorcycle"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://xemayngocmuoi.com" target="_blank" class="proj-link"
+                                        title="Live Site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Xe Máy Ngọc Mười</h3>
+                            <p class="project-desc">
+                                Trang web chính thức (Landing page & Catalog) cho cửa hàng xe máy.
+                                SEO tối ưu, tốc độ cao, đa ngôn ngữ, UI/UX hiện đại.
+                            </p>
+                            <div class="tech-badges">
+                                <span class="badge html">HTML</span>
+                                <span class="badge css">CSS</span>
+                                <span class="badge js">JavaScript</span>
+                                <span class="badge cf">Cloudflare</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/vochicuongg/xemayngocmuoi-official"
+                                    class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i>
+                                    Source</a>
+                                <a href="https://xemayngocmuoi.com" target="_blank" class="btn btn-sm btn-primary"><i
+                                        class="fa-solid fa-globe"></i> Live Site</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: VHU Chatbot -->
+                    <article class="project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder bot">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/vochicuongg/Tro-ly-VHU" class="proj-link"
+                                        title="Source Code"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Trợ lý ảo VHU</h3>
+                            <p class="project-desc">
+                                Chatbot hỗ trợ sinh viên trường ĐH Văn Hiến tra cứu thông tin,
+                                thời khóa biểu tự động. Triển khai trên Render.
+                            </p>
+                            <div class="tech-badges">
+                                <span class="badge node">Node.js</span>
+                                <span class="badge js">JavaScript</span>
+                                <span class="badge render">Render</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/vochicuong/Tro-ly-VHU" target="_blank"
+                                    class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Source</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: pfSense HA -->
+                    <article class="project-card reveal">
+                        <div class="project-img">
+                            <div class="project-img-placeholder network">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="proj-link" title="Source Code"><i
+                                            class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Hệ thống mạng High-Availability</h3>
+                            <p class="project-desc">
+                                Xây dựng hệ thống mạng dự phòng với pfSense, đảm bảo tính sẵn sàng cao,
+                                ứng phó sự cố mạng không gián đoạn dịch vụ.
+                            </p>
+                            <div class="tech-badges">
+                                <span class="badge pf">pfSense</span>
+                                <span class="badge docker">Docker</span>
+                                <span class="badge net">Networking</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i>
+                                    Source</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">04. Liên hệ</span>
+                    <h2 class="section-title">Kết nối <span class="gradient-text">cùng tôi</span></h2>
+                    <p class="section-sub">Có dự án thú vị? Hãy liên hệ với tôi!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Info cards -->
+                    <div class="contact-info reveal">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:cuong.vochi0411@gmail.com">cuong.vochi0411@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/vochicuongg" target="_blank">github.com/vochicuongg</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/vochicuongg"
+                                    target="_blank">linkedin.com/in/vochicuongg</a>
+                            </div>
+                        </div>
+
+                        <!-- Social icons -->
+                        <div class="social-icons">
+                            <a href="https://github.com/vochicuongg" target="_blank" class="social-btn"
+                                aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/vochicuongg" target="_blank" class="social-btn"
+                                aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:cuong.vochi0411@gmail.com" class="social-btn" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="https://facebook.com/ChiCuongDeyy" target="_blank" class="social-btn"
+                                aria-label="Facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact form -->
+                    <form class="contact-form reveal" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Họ và tên</label>
+                                <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="hello@example.com" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Tiêu đề</label>
+                            <input type="text" id="subject" name="subject" placeholder="Hợp tác dự án..." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nội dung</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Xin chào Cường, tôi muốn..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Gửi tin nhắn
+                        </button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">
+                <span class="logo-bracket">&lt;</span>Võ Chí Cường<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-quote">
+                "Trong một thế giới đang thay đổi rất nhanh chóng, lộ trình duy nhất đưa bạn đến thất bại là không dám
+                mạo hiểm."
+            </p>
+            <p class="footer-copy">© 2026 Võ Chí Cường. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Về đầu trang">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
