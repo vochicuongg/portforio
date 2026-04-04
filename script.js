@@ -238,7 +238,7 @@ contactForm.addEventListener('submit', async (e) => {
         });
 
         if (response.ok) {
-            showFormStatus('✅ Tin nhắn đã được gửi! Lần đầu tiên, FormSubmit có thể sẽ gửi email yêu cầu xác nhận kích hoạt đến email của bạn.', 'success');
+            showFormStatus('✅ Tin nhắn đã được gửi! Tôi sẽ phản hồi sớm nhất có thể.', 'success');
             contactForm.reset();
         } else {
             showFormStatus('❌ Có lỗi xảy ra trong quá trình gửi, vui lòng thử lại sau!', 'error');
