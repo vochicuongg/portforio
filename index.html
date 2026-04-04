@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -534,8 +537,10 @@
                             <img src="/assets/images/brands/xemayngocmuoi.webp" alt="Xe Máy Ngọc Mười">
                         </div>
                         <h3 class="freelance-title">Xe Máy Ngọc Mười</h3>
-                        <p class="freelance-desc">Website giới thiệu và danh mục sản phẩm cửa hàng xe máy. Tối ưu hóa SEO và tốc độ tải trang.</p>
-                        <a href="https://www.xemayngocmuoi.com/" target="_blank" class="freelance-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Website</a>
+                        <p class="freelance-desc">Website giới thiệu và danh mục sản phẩm cửa hàng xe máy. Tối ưu hóa
+                            SEO và tốc độ tải trang.</p>
+                        <a href="https://www.xemayngocmuoi.com/" target="_blank" class="freelance-link"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Xem Website</a>
                     </div>
 
                     <!-- Client 2 -->
@@ -544,8 +549,10 @@
                             <img src="/assets/images/brands/mrben.webp" alt="Mr Ben Jeep Tours">
                         </div>
                         <h3 class="freelance-title">Mr Ben Jeep Tours</h3>
-                        <p class="freelance-desc">Nền tảng đặt tour xe Jeep đa ngôn ngữ du lịch, tập trung vào UX/UI và tỷ lệ chuyển đổi khách hàng.</p>
-                        <a href="https://www.mrbenjeeptours.com/" target="_blank" class="freelance-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Website</a>
+                        <p class="freelance-desc">Nền tảng đặt tour xe Jeep đa ngôn ngữ du lịch, tập trung vào UX/UI và
+                            tỷ lệ chuyển đổi khách hàng.</p>
+                        <a href="https://www.mrbenjeeptours.com/" target="_blank" class="freelance-link"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Xem Website</a>
                     </div>
 
                     <!-- Client 3 -->
@@ -554,8 +561,10 @@
                             <img src="/assets/images/brands/mrlee.webp" alt="Mr Thanh Lee Travel">
                         </div>
                         <h3 class="freelance-title">Mr Thanh Lee Travel</h3>
-                        <p class="freelance-desc">Hệ thống website đặt vé tour và dịch vụ du lịch chuyên nghiệp, thiết kế thu hút, dễ sử dụng.</p>
-                        <a href="https://mrthanhleetravel.com/" target="_blank" class="freelance-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem Website</a>
+                        <p class="freelance-desc">Hệ thống website đặt vé tour và dịch vụ du lịch chuyên nghiệp, thiết
+                            kế thu hút, dễ sử dụng.</p>
+                        <a href="https://mrthanhleetravel.com/" target="_blank" class="freelance-link"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Xem Website</a>
                     </div>
                 </div>
             </div>
@@ -636,6 +645,11 @@
                             <label for="message">Nội dung</label>
                             <textarea id="message" name="message" rows="5" placeholder="Xin chào Cường, tôi muốn..."
                                 required></textarea>
+                        </div>
+                        <div class="form-group" style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+                            <!-- Đặt Site Key cục bộ (Test Key hoạt động cho mục đích thử nghiệm) -->
+                            <div class="g-recaptcha" data-sitekey="6LcpcqYsAAAAAPBpeJHrzWr23sqEtmZejhz1rEfW"
+                                data-theme="dark"></div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
                             <i class="fa-solid fa-paper-plane"></i>

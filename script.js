@@ -218,6 +218,13 @@ contactForm.addEventListener('submit', async (e) => {
         return;
     }
 
+    // reCAPTCHA validation
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        showFormStatus('Vui lòng xác nhận bạn không phải là robot!', 'error');
+        return;
+    }
+
     // Send email using FormSubmit AJAX
     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
     submitBtn.disabled = true;
@@ -240,6 +247,9 @@ contactForm.addEventListener('submit', async (e) => {
         if (response.ok) {
             showFormStatus('✅ Tin nhắn đã được gửi! Tôi sẽ phản hồi sớm nhất có thể.', 'success');
             contactForm.reset();
+            if (typeof grecaptcha !== 'undefined') {
+                grecaptcha.reset();
+            }
         } else {
             showFormStatus('❌ Có lỗi xảy ra trong quá trình gửi, vui lòng thử lại sau!', 'error');
         }
