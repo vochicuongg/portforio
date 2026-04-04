@@ -218,15 +218,35 @@ contactForm.addEventListener('submit', async (e) => {
         return;
     }
 
-    // Simulate sending (replace with real fetch/API call)
+    // Send email using FormSubmit AJAX
     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang gửi...';
     submitBtn.disabled = true;
 
-    await delay(1500); // Simulate API latency
+    try {
+        const response = await fetch("https://formsubmit.co/ajax/cuong.vochi0411@gmail.com", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                _subject: subject,
+                message: message
+            })
+        });
 
-    // SUCCESS (mock)
-    showFormStatus('✅ Tin nhắn đã được gửi! Tôi sẽ phản hồi sớm nhất có thể.', 'success');
-    contactForm.reset();
+        if (response.ok) {
+            showFormStatus('✅ Tin nhắn đã được gửi! Lần đầu tiên, FormSubmit có thể sẽ gửi email yêu cầu xác nhận kích hoạt đến email của bạn.', 'success');
+            contactForm.reset();
+        } else {
+            showFormStatus('❌ Có lỗi xảy ra trong quá trình gửi, vui lòng thử lại sau!', 'error');
+        }
+    } catch (error) {
+        showFormStatus('❌ Lỗi kết nối. Không thể gửi tin nhắn!', 'error');
+    }
+
     submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Gửi tin nhắn';
     submitBtn.disabled = false;
 });
@@ -278,6 +298,7 @@ mobileLinks.forEach(link => {
 const staggerContainers = [
     '.projects-grid',
     '.skills-grid',
+    '.freelance-grid',
     '.contact-info',
 ];
 
@@ -298,6 +319,7 @@ const bottomNavMap = {
     bnAbout: 'about',
     bnSkills: 'skills',
     bnProjects: 'projects',
+    bnFreelance: 'freelance',
     bnContact: 'contact',
 };
 
